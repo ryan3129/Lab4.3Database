@@ -1,4 +1,4 @@
-package my.edu.tarc.demoroom;
+package my.edu.tarc.lab42database;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -22,11 +22,20 @@ public class UserViewModel extends AndroidViewModel {
         allUsers = userRepository.getAllUsers();
     }
 
+    public static void deleteWord(User myUser) {
+    }
+
     public LiveData<List<User>> getAllUsers() {
         return allUsers;
     }
 
     public  void insertUser(User user){
         userRepository.insertUser(user);
+    }
+    public  void deleteUser(User user){
+        userRepository.deleteUser(user);
+    }
+    public  void updateUser(User user){
+        userRepository.updateUser(user);
     }
 }
